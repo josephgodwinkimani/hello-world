@@ -1,0 +1,16 @@
+name: hello-world
+recipe: lamp
+proxy:
+  pma:
+    - pma.hello-world.lndo.site
+config:
+  php: '7.4' 
+  webroot: .
+  database: mysql:5.7
+  xdebug: false
+services:
+  pma:
+    type: phpmyadmin
+    hosts: database
+  database:
+    portforward: true
