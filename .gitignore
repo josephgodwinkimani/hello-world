@@ -3,7 +3,7 @@ build
 coverage
 .vscode
 .DS_STORE
-.env
+!.env
 tmp
 # Add own
 .idea
