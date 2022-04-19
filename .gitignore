@@ -8,4 +8,4 @@ tmp
 # Add own
 .idea
 !.lando.yml
-database/migrations
+!database/migrations

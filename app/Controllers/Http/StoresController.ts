@@ -6,10 +6,10 @@ export default class StoresController {
 
     public async index({ response }: HttpContextContract) {
    
-        const store = "5"
+        const managerid = "1"
         const results = await Store
                         .query()
-                        .where('managerID', store)    
+                        .where('managerid', managerid)    
       
           if(results !== null){
               return results //json format
