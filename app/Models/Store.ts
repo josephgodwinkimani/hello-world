@@ -11,7 +11,7 @@ import { column, BaseModel } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Store extends BaseModel {
    
-  public static table = 'db_stores'
+  public static table = 'stores'
 
   @column({ isPrimary: true })
   public id: number
