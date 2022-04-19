@@ -17,42 +17,12 @@ export default class Store extends BaseModel {
   public id: number
 
   @column()
-  public managerID: number
+  public manager_id: number
 
   @column()
-  public location: string
+  public store_name: string
 
   @column()
   public status: string
-
-  @column()
-  public storePhoto: string 
-
-  @column()
-  public created_by: string
-
-  /*
-  * https://github.com/adonisjs/core/discussions/3298
-  */
-
-  @column.dateTime({
-    autoCreate: true,
-    serialize: (value: DateTime | null) => {
-      return value ? value.toFormat('yyyy-MM-dd HH:mm:ss') : value
-    },
-  })
-  public created_at: DateTime
-
-  @column()
-  public updated_by: string
-
-  @column.dateTime({ 
-    autoCreate: true, 
-    autoUpdate: true,
-    serialize: (value: DateTime | null) => {
-      return value ? value.toFormat('yyyy-MM-dd HH:mm:ss') : value
-    }, 
-  })
-  public updated_at: DateTime
 
 }
