@@ -6,8 +6,8 @@ export default class Stores extends BaseSchema {
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.string('storename')
-      table.integer('managerid')
+      table.string('store_name')
+      table.integer('manager_id')
       table.integer('status')
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
